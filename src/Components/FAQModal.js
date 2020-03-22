@@ -45,29 +45,32 @@ function FAQModal(props) {
     {
       title: "What is SaveOurFaves?",
       body:
-        "SaveOurFaves is a directory of Bay Area restaurants and coffee shops that offer online gift cards for purchase. It’s our hope that by providing this resource, we’ll be able to mobilize loyal customers to provide much-needed support for their favorite places in town."
+        "SaveOurFaves is a directory of small businesses that offer online gift cards for purchase. It’s our hope that by providing this resource, we’ll be able to mobilize loyal customers to provide much-needed support for their favorite places in town."
     },
     {
       title: "Why isn’t my favorite business on your site?",
       body:
-        "Please help us add your fave Bay Area food & beverages spots " +
+        "Please help us add your fave small businesses! Input their information " +
         addPlaceLink("here") +
-        ". We're open to adding more small business categories if this catches on."
+        "and we'll review it ASAP"
     },
     {
       title:
         "How else can I support our local businesses beyond purchasing a gift card?",
       body:
-        "Delivery and pickup are great options! Some restaurants that don’t normally offer delivery have started to offer curbside pickup during the pandemic so check their websites and social media to see what’s available. <br />" +
+        "Delivery and pickup are great options! Some restaurants that don’t normally offer delivery have started to offer curbside pickup during the pandemic, so check their websites and social media to see what’s available. <br />" +
         "Tip generously if you can (even for delivery/pickup), since employees are doing extra work and putting their health at risk. <br />" +
         "Encourage the government to get involved. Sign this " +
-        renderLink("http://chng.it/jM97Sbf9ct", "San Francisco petition") +
+        renderLink("http://chng.it/jM97Sbf9ct", "petition") +
         " to encourage lawmakers to offer emergency small business loans. Please call your US Representative and your Senators. You can be connected to the capitol switchboard at 202-224-3121. Demand that small businesses are part the federal stimulus plan."
     },
     {
-      title: "Why is this just for the Bay Area? Can you do this for my city?",
+      title: "Why is this just for California? Can you do this for my city?",
       body:
-        "As San Francisco natives, we started this project for our community. Over the past days, people have launched similar tools for their specific cities, or even nationally. Check out " +
+        "I started this project for Los Angeles building upon the work of other small business supporters in San Francisco. You, too, can help get a similar site working for your city. If you're a software engineer, fork the the saveourfaves " +
+        renderLink("https://github.com/mikeyk/saveourfaves-frontend", "github ") +
+        renderLink("https://github.com/mikeyk/saveourfaves-server", "repositories.") +
+        "Also, check out similar initiatives like" +
         renderLink("https://helpmainstreet.com/", "Help Main Street") +
         ", " +
         renderLink("https://givelocal.co/", "GiveLocal") +
@@ -81,23 +84,23 @@ function FAQModal(props) {
     {
       title: "Who built this? And why?",
       body:
-        "We’re Kaitlyn & Mike Krieger -- a husband and wife duo in San Francisco. We’re no longer going out because of COVID-19 (San Francisco is under a “shelter in place” ordinance), so we started buying gift cards to help support our favorite cafes and restaurants during this unpredictable time. SaveOurFaves is our simple way to make it easier for people to help local businesses through this difficult time. We got help and advice from some great friends and local business owners, in particular Phil Levin, Zack Schwab, Kristen Berman, Stefanie Krieger, Melissa Dyrdahl, Laura Buhler, and Paul Einbund. You can contact us with any questions about the site at " +
+        "The original SaveOurFaves platform was built by Kaitlyn & Mike Krieger -- a husband and wife duo in San Francisco. They're no longer going out because of COVID-19 (San Francisco is under a “shelter in place” ordinance), so they started buying gift cards to help support their favorite cafes and restaurants during this unpredictable time. SaveOurFaves is their simple way to make it easier for people to help local businesses through this difficult time. They got help and advice from some great friends and local business owners, in particular Phil Levin, Zack Schwab, Kristen Berman, Stefanie Krieger, Melissa Dyrdahl, Laura Buhler, and Paul Einbund. You can contact them with any questions about the site at " +
         renderLink("mailto:info@saveourfaves.org", "info@saveourfaves.org") +
-        " and see more about why we decided to start it " +
+        " and see more about why they decided to start it " +
         renderLink(
           "https://medium.com/@mikekrieger/launching-saveourfaves-lets-support-restaurants-with-gift-cards-c4fb3e1828cf",
           "here"
         ) +
-        "."
+        ". The Los Angeles site was started for similar reasons by Laura Eckman."
     }
   ];
   const bizFAQs = [
     {
       title: "Why isn’t my business showing up in your search results?",
       body:
-        "Please help us add your Bay Area food/beverage business " +
+        "Please help us add your SoCal small business " +
         addPlaceLink("here") +
-        ". We're open to adding more small business categories if this catches on."
+        ". We're currently reliant on community input to make sure we have the most up to date information as business bring gift card offerings online."
     },
     {
       title:
@@ -112,7 +115,7 @@ function FAQModal(props) {
     {
       title: "How can I encourage customers to buy gift cards?",
       body:
-        "People are looking for ways they can support their favorite businesses, so don’t be afraid to let them know that gift cards will help. Reach out to your community on Facebook, Twitter, and Instagram, and use your email list to get in touch with your customers. Ask them to consider buying a gift card for one month of spending to help you weather this storm and keep paying staff, so that you can continue offering great food/coffee/etc. for years to come."
+        "People are looking for ways they can support their favorite businesses, so don’t be afraid to let them know that gift cards will help. Reach out to your community on Facebook, Twitter, and Instagram, and use your email list to get in touch with your customers. Ask them to consider buying a gift card for one month of spending to help you weather this storm and keep paying staff, so that you can continue offering great service for years to come."
     }
   ];
   return (
@@ -124,7 +127,7 @@ function FAQModal(props) {
       onCancel={props.onClose}
       footer={<span></span>}
     >
-      <h2>For Restaurant-goers</h2>
+      <h2>For Supporters</h2>
       {consumerFAQs.map(faq => (
         <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
       ))}

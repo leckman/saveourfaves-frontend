@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography } from "antd";
+import Areas from "../CityData/Areas"
 import Neighborhoods from "../CityData/Neighborhoods";
 import axios from "axios";
 import { SuggestedPlaceCards } from "./SuggestedPlaceCards";
@@ -7,6 +8,12 @@ import { SuggestedPlaceCards } from "./SuggestedPlaceCards";
 const { Title } = Typography;
 
 function AreaDropdown(props) {
+  const alphabeticAreas = Object.entries(Areas)
+                                .sort((a1, a2) => a1[0] - a2[0])
+                                .map(area => {
+                                  const [key, name] = area;
+                                  return { key, name };
+                                });
   return (
     <select
       className="area-picker"
@@ -16,10 +23,7 @@ function AreaDropdown(props) {
         props.updateArea(newArea);
       }}
     >
-      <option value="sf">San Francisco</option>
-      <option value="eastbay">East Bay</option>
-      <option value="marin">Marin</option>
-      <option value="southbay">South Bay</option>
+      { alphabeticAreas.map(area => <option value={area.key}>{area.name}</option>) }
     </select>
   );
 }

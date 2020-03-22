@@ -33,7 +33,7 @@ class App extends React.Component {
     super(props);
     // TODO this is janktown routing
     const path = window.location.pathname.slice(1).toLowerCase();
-    const currentArea = Areas[path] ? path : "sf";
+    const currentArea = Areas[path] ? path : "westside";
 
     this.state = {
       faqVisible: false,
@@ -128,7 +128,7 @@ class App extends React.Component {
                     level={1}
                     style={{ color: "white", textAlign: "center" }}
                   >
-                    Your favorite Bay Area restaurant might close forever. Help
+                    Your favorite small businesses might close forever. Help
                     save it.
                   </Title>
                   <div className="header-sans">
@@ -179,7 +179,7 @@ class App extends React.Component {
                     <p>
                       Our small businesses need us more than ever. Even though
                       we can’t leave home, we can still support local
-                      restaurants by buying gift cards. It’s basically a
+                      businesses by buying gift cards. It’s basically a
                       mini-loan, so buy one now and make a plan to use it later.
                     </p>
                   </Col>
@@ -194,9 +194,9 @@ class App extends React.Component {
                   >
                     <Title level={3}>3 weeks can kill a business</Title>
                     <p>
-                      Restaurants have tons of fixed costs: rent, labor, loan
+                      Small businesses have tons of fixed costs: rent, labor, loan
                       repayments, insurance, supplies, repairs – the list goes
-                      on. Even successful restaurants have razor thin margins of
+                      on. For example, even successful restaurants have razor thin margins of
                       3-5%, and a third have struggled to pay employees at least
                       once. The “shelter-in-place” ordinance keeping customers
                       at home could tip the balance into bankruptcy.

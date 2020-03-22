@@ -69,7 +69,7 @@ export function AddNewPlaceModal(props) {
   }
   return (
     <Modal
-      title={<span>Add a New Bay Area Small Business</span>}
+      title={<span>Add a New LA County Small Business</span>}
       visible={props.shouldShow}
       onOk={args => {
         counter === 0 ? handleLinkSubmission() : resetAndClose();
